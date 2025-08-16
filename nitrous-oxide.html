@@ -1,64 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nitrous Oxide in Anesthesia: A Mechanistic and Clinical Review</title>
+  <meta name="description" content="A long-form scholarly review of nitrous oxide (N2O) in anesthesia by Carlyn Eudwig, MD — covering molecular pharmacology, one‑carbon metabolism, neurologic toxicity, developmental risk, occupational exposure, and perioperative risk management, with inline citations and references." />
   <style>
-    body { font-family: Georgia, serif; max-width: 900px; margin: auto; line-height: 1.7; padding: 30px; }
-    h1, h2, h3 { color: #002b5c; }
-    h1 { margin-top: 40px; }
-    h2 { margin-top: 30px; }
-    h3 { margin-top: 20px; }
-    p { margin-bottom: 18px; }
-    .author { font-style: italic; color: #444; margin-bottom: 30px; }
-    .references { font-size: 0.9em; margin-top: 40px; }
+    :root { --ink:#0b1830; --muted:#415a77; --accent:#0d2b52; --paper:#f7f9fc; --rule:#e3e9f3; }
+    html,body{margin:0}
+    body { font-family: Georgia, "Times New Roman", serif; color: var(--ink); background: var(--paper); }
+    header { background: #fff; border-bottom: 1px solid var(--rule); }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 28px 24px; }
+    h1,h2,h3,h4 { color: var(--accent); line-height: 1.25; }
+    h1 { font-size: 2.15rem; margin: 0 0 6px; }
+    h2 { margin-top: 32px; font-size: 1.6rem; }
+    h3 { margin-top: 22px; font-size: 1.25rem; }
+    p { line-height: 1.78; margin: 0 0 16px; }
+    .byline { font-style: italic; color: var(--muted); margin-bottom: 24px; }
+    .abstract, .callout, .tablewrap, .figurewrap { background:#fff; border:1px solid var(--rule); padding:16px 18px; border-radius:10px; }
+    .abstract { box-shadow: 0 6px 16px rgba(6,25,56,.05); }
+    .callout { margin: 18px 0; }
+    .toc { background:#fff; border:1px dashed var(--rule); padding:14px 16px; border-radius:10px; margin:22px 0; }
+    .toc a { color:#0b3a7a; text-decoration:none; }
+    ul,ol { margin: 0 0 18px 24px; }
+    blockquote { margin:16px 0; padding:12px 16px; background:#f3f7ff; border-left:4px solid #cfe0ff; }
+    .small { font-size:.96rem; color:#2e3d59; }
+    .refs { border-top:1px solid var(--rule); margin-top:26px; padding-top:14px; }
+    .refnum { font-weight:700; }
+    sup.cite a { color:#0b3a7a; text-decoration:none; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { border:1px solid var(--rule); padding:10px; vertical-align: top; }
+    th { background:#f6f9ff; text-align:left; }
+    .caption { font-size:.92rem; color:#40506b; margin-top:8px; }
+    footer { background:#fff; border-top:1px solid var(--rule); margin-top:40px; }
+    .muted { color:#5a6d84; }
+    code.k { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.92em; background:#eef3fb; padding:1px 4px; border-radius:4px; }
+    @media (max-width: 720px){ .wrap{padding:22px 16px} }
   </style>
 </head>
 <body>
-  <h1>Nitrous Oxide in Anesthesia: A Mechanistic and Clinical Review</h1>
-  <p class="author">Carlyn Eudwig, MD<br>
-  Department of Anesthesiology, Boston, MA</p>
 
-  <h2>Abstract</h2>
-  <p>Nitrous oxide (N<sub>2</sub>O) remains one of the most historically significant and mechanistically intriguing anesthetic agents. Its clinical use spans over 150 years, yet modern research has illuminated complex neurotoxic, teratogenic, and occupational hazards associated with exposure. This review synthesizes contemporary mechanistic, toxicologic, and epidemiologic data, with particular attention to its molecular pharmacology, neurologic complications, developmental toxicity, and implications for anesthesia providers. By critically evaluating recent literature, this paper provides a comprehensive framework for understanding nitrous oxide’s role in current and future anesthetic practice.</p>
+<header>
+  <div class="wrap">
+    <h1>Nitrous Oxide in Anesthesia: A Mechanistic and Clinical Review</h1>
+    <div class="byline">Carlyn Eudwig, MD — Department of Anesthesiology, Boston, MA</div>
+    <div class="abstract">
+      <strong>Abstract.</strong> Nitrous oxide (N<sub>2</sub>O) persists in contemporary practice because it is rapid, familiar, and generally hemodynamically tolerant. It is also uniquely hazardous at the molecular level: by oxidizing cobalamin and inactivating methionine synthase, it deranges one‑carbon metabolism with hematologic, neurologic, and developmental sequelae. This review integrates physical pharmacology, receptor‑level actions, systems physiology, mechanistic toxicology, neurologic and reproductive outcomes, occupational exposure, and perioperative risk management. Emphasis is placed on mechanistic plausibility and clinical decision‑making rather than sentimentality for an historical agent.<sup class="cite"><a href="#ref1">1</a>–<a href="#ref4">4</a></sup>
+    </div>
+    <nav class="toc small" aria-label="Table of contents">
+      <strong>Contents:</strong>
+      <a href="#intro">Introduction</a> •
+      <a href="#history">Historical Evolution</a> •
+      <a href="#physchem">Physical Chemistry & Kinetics</a> •
+      <a href="#pharm">Receptor Pharmacology</a> •
+      <a href="#onecarbon">One‑Carbon Metabolism Lesion</a> •
+      <a href="#systems">Systems Physiology</a> •
+      <a href="#neuro">Neurologic Toxicity</a> •
+      <a href="#dev">Developmental & Reproductive Risk</a> •
+      <a href="#occ">Occupational Exposure</a> •
+      <a href="#periop">Perioperative Use & Risk Management</a> •
+      <a href="#comparative">Comparative & Environmental Considerations</a> •
+      <a href="#future">Controversies & Future Directions</a> •
+      <a href="#refs">References</a>
+    </nav>
+  </div>
+</header>
 
-  <h2>Historical Perspectives</h2>
-  <p>Nitrous oxide was first synthesized by Joseph Priestley in 1772, with its anesthetic properties recognized later in the 19th century. Early adoption in surgical practice was rapid due to its favorable safety margin compared to chloroform and ether. Despite its declining use in modern anesthetic practice, particularly in tertiary academic centers, nitrous oxide persists globally due to its low cost, rapid onset, and analgesic properties. Its continued administration, however, is increasingly controversial given its unique biologic liabilities.</p>
+<main class="wrap">
 
-  <h2>Molecular Pharmacology</h2>
-  <p>Nitrous oxide is a weak anesthetic agent with a minimum alveolar concentration (MAC) of approximately 104%, precluding its use as a sole agent. Its mechanism of action is multifactorial: antagonism of NMDA receptors, potentiation of GABAergic pathways, and modulation of opioid receptors contribute to its clinical profile. The gas demonstrates low blood-gas solubility, resulting in rapid induction and emergence, a feature historically advantageous for outpatient anesthesia. Partition coefficients reveal poor lipid solubility relative to halogenated ethers, yet sufficient to induce cortical depression at high concentrations.</p>
+  <h2 id="intro">Introduction</h2>
+  <p>
+    Nitrous oxide is the paradox of modern anesthesia. It is neither potent enough to be a sole anesthetic (MAC ≈ 104%) nor benign enough to be dismissed as harmless adjunct. Its blood–gas partition coefficient (≈0.47) ensures a kinetic elegance—rapid uptake and wash‑out—that shaped outpatient anesthesia long before short‑acting intravenous agents matured. Yet contemporary science has made plain that N<sub>2</sub>O is more than “laughing gas”: it is a targeted biochemical lesion in one‑carbon biology, capable of precipitating megaloblastic hematopoiesis, demyelination, and embryologic failure in susceptible hosts.<sup class="cite"><a href="#ref1">1</a></sup>
+  </p>
 
-  <h2>Systemic and Neurologic Effects</h2>
-  <p>Cardiovascularly, nitrous oxide exerts mild sympathomimetic effects that may preserve blood pressure compared to volatile anesthetics. Cerebral blood flow, however, is increased, potentially exacerbating intracranial hypertension. Of greatest concern is its interference with cobalamin metabolism: nitrous oxide oxidizes the cobalt atom within vitamin B<sub>12</sub>, irreversibly inactivating methionine synthase. This enzymatic blockade disrupts DNA synthesis, myelin formation, and methylation pathways, predisposing to megaloblastic anemia and subacute combined degeneration of the spinal cord.</p>
+  <h2 id="history">Historical Evolution</h2>
+  <p>
+    From Davy’s observations of euphoria to the early 20th‑century demonstrations of safe surgical anesthesia, nitrous oxide’s reputation oscillated between marvel and menace. Its ascendancy in dentistry and obstetrics owed to portability, speed, and the perceived margin of safety; its later retreat in some academic centers reflected both competing technologies (e.g., sevoflurane, propofol) and an expanding literature on molecular toxicity. The present era—concerned with individualized risk and environmental stewardship—demands mechanistic clarity rather than nostalgia.
+  </p>
 
-  <h2>Neurologic Complications</h2>
-  <p>Acute neurotoxicity manifests as paresthesia, ataxia, and cognitive impairment. Chronic or repeated exposure is linked to demyelination syndromes resembling vitamin B<sub>12</sub> deficiency, even in patients with initially normal serum levels. Dobson et al. (2018) emphasized that patients with pre-existing B<sub>12</sub> deficiency, whether due to pernicious anemia, malnutrition, or genetic polymorphisms, are particularly vulnerable. Long-term neurologic sequelae underscore the need for strict risk stratification before nitrous oxide administration.</p>
+  <h2 id="physchem">Physical Chemistry & Kinetics</h2>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Property</th><th>Approximate Value / Implication</th></tr></thead>
+      <tbody>
+        <tr><td>Molecular mass</td><td>44 g·mol<sup>−1</sup></td></tr>
+        <tr><td>Blood–gas partition coefficient</td><td>≈ 0.47 → rapid alveolar equilibration and emergence</td></tr>
+        <tr><td>Oil–gas solubility</td><td>Low relative to halogenated ethers → weak hypnotic potency</td></tr>
+        <tr><td>MAC (adult)</td><td>≈ 104% → cannot achieve surgical immobility alone<sup class="cite"><a href="#ref1">1</a></sup></td></tr>
+        <tr><td>Diffusion behavior</td><td>Expands compliant gas spaces (pneumothorax, bowel, middle ear); causes diffusion hypoxia upon abrupt discontinuation</td></tr>
+      </tbody>
+    </table>
+    <div class="caption">Table 1. Physical constants and their clinical consequences.<sup class="cite"><a href="#ref1">1</a></sup></div>
+  </div>
+  <p>
+    Concentration and second‑gas effects elevate alveolar partial pressures during induction when N<sub>2</sub>O is co‑administered, accelerating uptake of companion agents. During wash‑out, displaced alveolar oxygen may transiently fall; several minutes of 100% O<sub>2</sub> is therefore routine to avert diffusion hypoxia.
+  </p>
 
-  <h2>Teratogenicity and Neural Tube Defects</h2>
-  <p>Compelling evidence implicates nitrous oxide in teratogenic processes, particularly neural tube defects (NTDs). Finnell et al. (2020) detailed mechanistic links between methionine synthase inhibition, folate cycle disruption, and embryonic neurodevelopmental failure. Epidemiologic associations between occupational exposure and increased rates of spontaneous abortion, congenital malformations, and impaired fertility have been observed. Although causality is multifactorial, the biologic plausibility of nitrous oxide–induced NTDs has informed stricter occupational exposure limits and patient-specific avoidance in early pregnancy.</p>
+  <h2 id="pharm">Receptor Pharmacology</h2>
+  <h3>Polyreceptorial Signature</h3>
+  <p>
+    The agent’s behavioral pharmacology reflects noncompetitive antagonism at NMDA receptors, modulation of endogenous opioid pathways, dopaminergic signaling in mesolimbic networks, and indirect GABAergic facilitation. Analgesia is disproportionate to hypnosis; MAC‑sparing is reliable, but surgical immobility requires adjunctive hypnotic and/or volatile agents.
+  </p>
+  <h3>Hemodynamic Effects</h3>
+  <p>
+    Mild sympathomimetic tone counters vasodilation seen with many volatiles, often preserving blood pressure and cardiac output. This hemodynamic profile, coupled with rapid kinetics, explains historic enthusiasm despite mechanistic liabilities.<sup class="cite"><a href="#ref1">1</a></sup>
+  </p>
 
-  <h2>Occupational Hazards</h2>
-  <p>Operating room personnel remain at risk for chronic low-level nitrous oxide exposure. Henderson et al. (2022) highlighted associations with neurologic impairment, reproductive complications, and hematologic abnormalities among anesthesia providers. Modern scavenging systems mitigate but do not eliminate exposure. The persistence of nitrous oxide in resource-limited hospitals without adequate scavenging represents a significant occupational health challenge, raising ethical concerns for global anesthesia equity.</p>
+  <h2 id="onecarbon">The One‑Carbon Metabolism Lesion</h2>
+  <h3>Molecular Event</h3>
+  <p>
+    Nitrous oxide oxidizes the cobalt atom within cobalamin (vitamin B<sub>12</sub>), irreversibly inactivating <em>methionine synthase</em>—the folate‑dependent enzyme that remethylates homocysteine to methionine. The consequence is a global shortfall of S‑adenosyl‑methionine (SAM), the universal methyl donor for DNA, RNA, protein, phospholipid, and neurotransmitter methylation.<sup class="cite"><a href="#ref1">1</a></sup>
+  </p>
+  <h3>Pathophysiologic Cascade</h3>
+  <ul>
+    <li><strong>Hematologic:</strong> impaired thymidylate synthesis → megaloblastic hematopoiesis.</li>
+    <li><strong>Neurologic:</strong> hypomethylation and disordered myelin maintenance → dorsal column and corticospinal tract demyelination.</li>
+    <li><strong>Vascular:</strong> hyperhomocysteinemia → endothelial dysfunction and prothrombotic milieu.</li>
+  </ul>
+  <div class="callout small">
+    <strong>Mechanistic clarity.</strong> The same lesion—methionine‑synthase inhibition—explains seemingly disparate outcomes: anemia, neuropathy/myelopathy, and embryologic failure. Clinical heterogeneity reflects host folate/B<sub>12</sub> status, genetic polymorphisms, dose, and timing of exposure.<sup class="cite"><a href="#ref1">1</a>, <a href="#ref3">3</a></sup>
+  </div>
 
-  <h2>Comparative Anesthetic Toxicology</h2>
-  <p>Relative to halogenated ethers, nitrous oxide possesses a unique profile: low potency, preserved hemodynamics, but disproportionate neurotoxic and teratogenic liability. Agents such as sevoflurane and desflurane lack cobalamin inactivation effects, though they impose distinct risks of hepatotoxicity and environmental burden. Xenon, by contrast, offers neuroprotective properties but remains financially prohibitive. These comparisons frame nitrous oxide as an anesthetic relic whose persistence is driven more by economics than clinical superiority.</p>
+  <h2 id="systems">Systems Physiology</h2>
+  <h3>Cardiovascular</h3>
+  <p>
+    Blood pressure is often better preserved with N<sub>2</sub>O than with equipotent concentrations of halogenated ethers. Coronary perfusion generally remains adequate; pulmonary vascular resistance may increase modestly—a consideration in pulmonary hypertension.
+  </p>
+  <h3>Respiratory</h3>
+  <p>
+    Minute ventilation may be preserved or slightly reduced: respiratory rate rises while tidal volume falls. Hypoxic ventilatory drive is blunted; vigilant O<sub>2</sub> supplementation during emergence mitigates diffusion hypoxia.
+  </p>
+  <h3>Cerebral</h3>
+  <p>
+    Cerebral blood flow and intracranial pressure tend to increase with N<sub>2</sub>O; cerebral metabolic rate is variably affected. In intracranial pathology, incremental risk must be weighed against hemodynamic advantages and alternative strategies.
+  </p>
 
-  <h2>Clinical Risk Stratification</h2>
-  <p>Absolute contraindications to nitrous oxide include pneumothorax, bowel obstruction, inner ear surgery, and known vitamin B<sub>12</sub> deficiency. Relative contraindications include early pregnancy, elevated intracranial pressure, and immunocompromised states. Preoperative screening for B<sub>12</sub> deficiency and folate status is advisable in high-risk populations. Despite these risks, nitrous oxide retains a niche role in labor analgesia, pediatric induction, and select outpatient procedures when used judiciously.</p>
+  <h2 id="neuro">Neurologic Toxicity</h2>
+  <p>
+    Clinical neurotoxicity spans distal paresthesias and gait ataxia to subacute combined degeneration with proprioceptive loss and spasticity—an imaging and histopathologic mirror of severe B<sub>12</sub> deficiency. Dobson and colleagues catalogue these presentations and emphasize susceptibility in pernicious anemia, malabsorption, vegan diets, and recreational misuse. A single exposure may precipitate injury in profoundly deficient states; cumulative exposure magnifies risk.<sup class="cite"><a href="#ref2">2</a></sup>
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Clinical Domain</th><th>Typical Findings</th><th>Mechanistic Link</th></tr></thead>
+      <tbody>
+        <tr><td>Sensory</td><td>Distal numbness, paresthesias, loss of vibration/proprioception</td><td>Dorsal column demyelination (hypomethylation)</td></tr>
+        <tr><td>Motor</td><td>Spastic gait, weakness in severe cases</td><td>Corticospinal tract involvement</td></tr>
+        <tr><td>Cognition/Mood</td><td>Memory deficits, depression, irritability</td><td>Neurotransmitter methylation/monoamine balance</td></tr>
+        <tr><td>Hematologic</td><td>Megaloblastic anemia, macrocytosis</td><td>Impaired DNA synthesis</td></tr>
+      </tbody>
+    </table>
+    <div class="caption">Table 2. Neurologic–hematologic expression of the one‑carbon lesion.<sup class="cite"><a href="#ref2">2</a></sup></div>
+  </div>
 
-  <h2>Ethical and Public Health Considerations</h2>
-  <p>The persistence of nitrous oxide in clinical practice reflects a tension between cost-effectiveness and biologic liability. In high-income countries, avoidance reflects risk aversion and access to safer alternatives. In low- and middle-income countries, nitrous oxide remains indispensable due to its low cost and portability. Addressing this global inequity requires investments in scavenging infrastructure, provider education, and context-specific risk-benefit analyses.</p>
+  <h2 id="dev">Developmental & Reproductive Risk</h2>
+  <p>
+    Organogenesis requires intact folate cycling and methylation. Finnell et&nbsp;al. synthesize animal and human evidence linking N<sub>2</sub>O exposure to neural‑tube‑defect risk via methionine‑synthase inhibition. Epidemiology further suggests increased miscarriage and congenital anomalies in occupationally exposed workers absent effective scavenging. The risk is temporally concentrated in the periconceptional/first‑trimester window and modulated by folate sufficiency.<sup class="cite"><a href="#ref3">3</a></sup>
+  </p>
+
+  <h2 id="occ">Occupational Exposure</h2>
+  <p>
+    Henderson et&nbsp;al. document neurologic symptoms, mood disturbance, and adverse reproductive outcomes among anesthesia providers with chronic low‑level exposure, underscoring the need for functional scavenging, adequate air exchanges, and periodic monitoring. Practical targets include time‑weighted averages near recommended limits and rapid remediation of leaks (mask fit, circuit integrity, pipeline connectors). In resource‑limited settings, the ethical challenge is stark: clinical benefit without infrastructure can externalize risk onto staff.<sup class="cite"><a href="#ref4">4</a></sup>
+  </p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Control Layer</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td>Engineering</td><td>OR scavenging, high air‑exchange HVAC, real‑time leak detection</td></tr>
+        <tr><td>Administrative</td><td>Maintenance schedules, exposure monitoring, incident reporting</td></tr>
+        <tr><td>Work practice</td><td>Tight mask fit, minimal flows when feasible, prompt disconnection after use</td></tr>
+        <tr><td>PPE (limited role)</td><td>Respirators only as interim mitigation during failures</td></tr>
+      </tbody>
+    </table>
+    <div class="caption">Table 3. Hierarchy of controls for occupational N<sub>2</sub>O exposure.<sup class="cite"><a href="#ref4">4</a></sup></div>
+  </div>
+
+  <h2 id="periop">Perioperative Use & Risk Management</h2>
+  <h3>Risk‑Stratified Algorithm</h3>
+  <ol>
+    <li><strong>Screen</strong> for B<sub>12</sub>/folate deficiency, pregnancy (1st trimester), gas‑filled spaces (pneumothorax, bowel obstruction, intracranial/intraocular gas), pulmonary hypertension, and intracranial hypertension.<sup class="cite"><a href="#ref1">1</a>, <a href="#ref2">2</a>, <a href="#ref3">3</a></sup></li>
+    <li><strong>Decide</strong> whether MAC‑sparing/hemodynamic advantages justify mechanistic liability in this patient and setting.</li>
+    <li><strong>Administer</strong> N<sub>2</sub>O typically ≤50–70% with vigilant O<sub>2</sub> supplementation, avoiding closed gas spaces and monitoring ventilation.</li>
+    <li><strong>Protect staff</strong> with functioning scavenging and exposure monitoring; remediate leaks.
+    </li>
+  </ol>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Contraindication</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>Pneumothorax / intracranial or intraocular gas</td><td>Gas expansion worsens mass effect</td></tr>
+        <tr><td>Bowel obstruction / middle‑ear surgery</td><td>Lumen pressurization, pain, or graft failure risk</td></tr>
+        <tr><td>Known/suspected B<sub>12</sub> or folate deficiency</td><td>Exaggerated neurologic/hematologic injury</td></tr>
+        <tr><td>Early pregnancy</td><td>Neurulation vulnerability (mechanistic plausibility)</td></tr>
+        <tr><td>Severe pulmonary hypertension</td><td>Potential rise in PVR</td></tr>
+        <tr><td>Elevated ICP</td><td>CBF/ICP increases may be undesirable</td></tr>
+      </tbody>
+    </table>
+    <div class="caption">Table 4. Practical contraindications and the mechanisms that justify them.<sup class="cite"><a href="#ref1">1</a>–<a href="#ref3">3</a></sup></div>
+  </div>
+
+  <h2 id="comparative">Comparative & Environmental Considerations</h2>
+  <p>
+    Relative to halogenated ethers, nitrous oxide lacks fluoride‑mediated hepatotoxicity but substitutes a deeper metabolic liability in one‑carbon biology. Against total intravenous anesthesia (TIVA), it offers neither superior recovery nor antiemesis; against xenon—a fellow NMDA antagonist—it loses on neuroprotection and metabolic neutrality, yet wins on cost and availability. Environmental concerns (greenhouse impact) argue against routine use when safer substitutes are equivalent in outcome. The residual niche for N<sub>2</sub>O is where its MAC‑sparing effect and gentle hemodynamics uniquely solve a problem and infrastructure supports safe delivery.
+  </p>
+
+  <h2 id="future">Controversies & Future Directions</h2>
+  <p>
+    The central controversy is whether a 19th‑century gas belongs in 21st‑century precision anesthesia. Proponents cite speed, familiarity, and marginal gains in agent‑sparing; critics emphasize mechanistic toxicity, reproductive/occupational concerns, and environmental cost. Future work should clarify genetic and nutritional determinants of susceptibility, develop point‑of‑care markers of one‑carbon stress, quantify exposure–response in modern scavenged ORs, and test whether intermittent clinical dosing imparts durable neurologic signal in vulnerable subgroups.<sup class="cite"><a href="#ref1">1</a>–<a href="#ref4">4</a></sup>
+  </p>
 
   <h2>Conclusion</h2>
-  <p>Nitrous oxide occupies a paradoxical role in modern anesthetic practice: historically foundational, mechanistically fascinating, yet biologically hazardous. As mechanistic insights deepen — from B<sub>12</sub> inactivation to teratogenesis — the rationale for routine use diminishes. Nitrous oxide endures not due to superiority, but to affordability and accessibility. Its continued role demands vigilant occupational safeguards, patient-specific risk stratification, and candid acknowledgment of its liabilities within the anesthesiology community.</p>
+  <p>
+    Nitrous oxide endures because it is fast and often forgiving; it warrants restraint because it targets a pathway foundational to cellular life. A mechanistic mindset—anchored on methionine‑synthase biology—supports selective, infrequent use under robust exposure control, with explicit avoidance when risk factors align. In such a framework, N<sub>2</sub>O transitions from routine habit to context‑specific tool.
+  </p>
 
-  <h2>References</h2>
-  <div class="references">
-    <p>Sanders RD, Weimann J, Maze M. Biologic effects of nitrous oxide: a mechanistic and toxicologic review. <i>Anaesthesia.</i> 2022;77(7):785-796. doi:10.1111/anae.15670</p>
-    <p>Dobson R, Al-Balushi A, Smith A. Neurologic complications of nitrous oxide exposure: clinical review. <i>J Neurol Neurosurg Psychiatry.</i> 2018;89(7):674-680. doi:10.1136/jnnp-2018-318022</p>
-    <p>Finnell RH, Shaw GM, Lammer EJ, et al. Nitrous oxide and risk of neural tube defects: evidence and mechanisms. <i>Birth Defects Res.</i> 2020;112(18):1494-1504. doi:10.1002/bdr2.1816</p>
-    <p>Henderson KA, Shusterman D, Palmer CD. Occupational exposure to nitrous oxide and health outcomes among anesthesia providers. <i>J Occup Environ Med.</i> 2022;64(5):342-349. doi:10.1097/JOM.0000000000002572</p>
+  <h2 id="refs">References</h2>
+  <div class="refs small">
+    <p id="ref1"><span class="refnum">1.</span> Sanders RD, Weimann J, Maze M. Biologic effects of nitrous oxide: a mechanistic and toxicologic review. <em>Anaesthesia.</em> 2022;77(7):785–796. doi:10.1111/anae.15670</p>
+    <p id="ref2"><span class="refnum">2.</span> Dobson R, Al‑Balushi A, Smith A. Neurologic complications of nitrous oxide exposure: clinical review. <em>J Neurol Neurosurg Psychiatry.</em> 2018;89(7):674–680. doi:10.1136/jnnp-2018-318022</p>
+    <p id="ref3"><span class="refnum">3.</span> Finnell RH, Shaw GM, Lammer EJ, et&nbsp;al. Nitrous oxide and risk of neural tube defects: evidence and mechanisms. <em>Birth Defects Res.</em> 2020;112(18):1494–1504. doi:10.1002/bdr2.1816</p>
+    <p id="ref4"><span class="refnum">4.</span> Henderson KA, Shusterman D, Palmer CD. Occupational exposure to nitrous oxide and health outcomes among anesthesia providers. <em>J Occup Environ Med.</em> 2022;64(5):342–349. doi:10.1097/JOM.0000000000002572</p>
   </div>
+
+</main>
+
+<footer>
+  <div class="wrap small muted">
+    © <script>document.write(new Date().getFullYear())</script> • Carlyn Eudwig, MD
+  </div>
+</footer>
+
 </body>
 </html>
